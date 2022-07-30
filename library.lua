@@ -19,7 +19,7 @@ function Library:NewWindow(GameName)
 	Window.Parent = Ichizu
 	Window.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 	Window.BorderSizePixel = 0
-	Window.Position = UDim2.new(0, 207, 0, 77)
+	Window.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Window.Size = UDim2.new(0, 390, 0, 350)
 	
 	ImageLabel.Parent = Window
@@ -96,13 +96,6 @@ function Library:NewWindow(GameName)
 		TabButton.TextSize = 13.000
 		TabButton.TextWrapped = true
 		
-		ContainerHolder.Name = "ContainerHolder"
-		ContainerHolder.Parent = Window
-		ContainerHolder.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-		ContainerHolder.BorderSizePixel = 0
-		ContainerHolder.Position = UDim2.new(0, 0, 0, 40)
-		ContainerHolder.Size = UDim2.new(0, 390, 0, 200)
-		
 		Page.Name = Name
 		Page.Parent = ContainerHolder
 		Page.Active = true
@@ -156,6 +149,21 @@ function Library:NewWindow(GameName)
 		SectionTitle.Text = Name
 		SectionTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		SectionTitle.TextSize = 13.000
+		
+		TabButton.MouseButton1Click:Connect(function()
+			for i,v in pairs(TabWindow:GetChildren()) do
+				if v:IsA("TextButton") and v.Name == TabButton.Name then
+					
+					for i,v in pairs(ContainerHolder:GetChildren()) do
+						if v:IsA("Frame") then
+							v.Visible = false
+						end
+					end
+					
+					v.Visible = true
+				end
+			end
+		end)
 	end
 	
 	return TabLibrary;
