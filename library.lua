@@ -9,12 +9,6 @@ function Library:NewWindow(GameName)
 	local PlayerGame = Instance.new("TextLabel")
 	local UICorner = Instance.new("UICorner")
 	local ContainerHolder = Instance.new("Frame")
-	local Page = Instance.new("ScrollingFrame")
-	local ContainerList = Instance.new("UIListLayout")
-	local Page_2 = Instance.new("Frame")
-	local SectionIn = Instance.new("Frame")
-	local SectionInList = Instance.new("UIListLayout")
-	local SectionInUICorner = Instance.new("UICorner")
 	local ImageLabel = Instance.new("ImageLabel")
 
 	Ichizu.Name = "Ichizu"
@@ -76,49 +70,6 @@ function Library:NewWindow(GameName)
 	ContainerHolder.BorderSizePixel = 0
 	ContainerHolder.Position = UDim2.new(0, 0, 0, 40)
 	ContainerHolder.Size = UDim2.new(0, 390, 0, 200)
-
-	Page.Name = "Page"
-	Page.Parent = ContainerHolder
-	Page.Active = true
-	Page.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-	Page.BorderSizePixel = 0
-	Page.Position = UDim2.new(0, 5, 0, 5)
-	Page.Size = UDim2.new(0, 380, 0, 300)
-	Page.BottomImage = ""
-	Page.CanvasSize = UDim2.new(0, 0, 0, 415)
-	Page.MidImage = ""
-	Page.ScrollBarThickness = 2
-	Page.TopImage = ""
-
-	ContainerList.Name = "ContainerList"
-	ContainerList.Parent = Page
-	ContainerList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-	ContainerList.SortOrder = Enum.SortOrder.LayoutOrder
-	ContainerList.Padding = UDim.new(0, 5)
-
-	Page_2.Name = "Page"
-	Page_2.Parent = Page
-	Page_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-	Page_2.BorderSizePixel = 0
-	Page_2.Position = UDim2.new(0.0263157897, 0, 0, 0)
-	Page_2.Size = UDim2.new(0, 360, 0, 410)
-
-	SectionIn.Name = "SectionIn"
-	SectionIn.Parent = Page_2
-	SectionIn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-	SectionIn.BorderSizePixel = 0
-	SectionIn.Position = UDim2.new(0, 0, 0, 20)
-	SectionIn.Size = UDim2.new(0, 360, 0, 395)
-
-	SectionInList.Name = "SectionInList"
-	SectionInList.Parent = SectionIn
-	SectionInList.HorizontalAlignment = Enum.HorizontalAlignment.Center
-	SectionInList.SortOrder = Enum.SortOrder.LayoutOrder
-	SectionInList.Padding = UDim.new(0, 10)
-
-	SectionInUICorner.CornerRadius = UDim.new(0, 2)
-	SectionInUICorner.Name = "SectionInUICorner"
-	SectionInUICorner.Parent = SectionIn
 	
 	local TabLibrary = {}
 	
