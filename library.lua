@@ -124,7 +124,6 @@ function Library:NewWindow(GameName)
 	
 	function TabLibrary:NewPage(Name)
 		local TabButton = Instance.new("TextButton")
-		local ContainerHolder = Instance.new("Frame")
 		local Page = Instance.new("Frame")
 		local ContainerList = Instance.new("UIListLayout")
 		local Page_2 = Instance.new("Frame")
